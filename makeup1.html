@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- == css 樣式 == -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- == 清除預設樣式 == -->
+  <link rel="stylesheet" href="./css/normalize.css">
+  <!-- == font awesome : icon 的使用 == -->
+  <link rel="stylesheet" href="./css/all.css">
+  <title>美妝保養館-美妝</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background: url('./images/美妝保養背景.jpg');
+    }
+  </style>
+</head>
+<body>
+  <!-- 架構1. 導覽列 -->
+  <div id="navbar">
+    <div class="container">
+      <!-- (1) 漢堡清單按鈕 -->
+      <button type="button" id="btn-list" class="btn" data-key="0"><i class="fa-solid fa-bars"></i></button>
+      <!-- (2) logo -->
+      <a href="./index.html" id="logo"><img src="./images/lodo.svg"></a>
+      <!-- (4) 導覽列菜單 -->
+      <ul id="menu">
+        <li id="btn-menuChild" data-key="0">
+          <p>
+            <i class="fa-solid fa-store"></i>&nbsp; 全館分類
+            <i class="fa-solid fa-chevron-down menuIcon"></i>
+          </p>
+          <ul>
+            <li><a href="./electrical1.html">3C&nbsp;家電館</a></li>
+            <li><a href="./food1.html">人氣美食館</a></li>
+            <li><a href="./makeup1.html">美妝保養館</a></li>
+          </ul>
+        </li>
+        <li><p><a href="./contact.html"><i class="fa-solid fa-envelope"></i>&nbsp; 聯絡我們</a></p></li>
+      </ul>
+      <!-- (3-1) 回首頁按鈕 -->
+      <button type="button" id="btn-home" class="btn"><a href="./index.html"><i class="fa-solid fa-house"></i></a></button>
+      <!-- (3-2) 會員登入按鈕 -->
+      <button type="button" id="btn-user" class="btn"><i class="fa-solid fa-circle-user"></i></button>
+    </div>
+  </div>
+
+  <!-- 會員登入畫面 -->
+  <div id="user">
+    <div class="content">
+      <!-- 關閉視窗按鈕 -->
+      <button type="button" id="btn-close"><i class="fa-solid fa-circle-xmark"></i></button>
+      <!-- (1) 放 logo -->
+      <div><img src="./images/lodo.svg"></div>
+      <!-- (2) 登入 / 註冊 按鈕 -->
+      <div>
+        <div><button type="button" id="btn-signIn" class="btn">登入</button></div>
+        <div><button type="button" id="btn-signUp" class="btn">註冊</button></div>
+      </div>
+      <!-- (3) 登入 / 註冊 內容 -->
+      <div>
+        <form id="signIn">
+          <div><input type="email" class="btn formClear" placeholder="信箱"></div>
+          <div><input type="password" class="btn formClear" placeholder="密碼"></div>
+          <div><div><input type="checkbox">&nbsp; 記住密碼</div></div>
+          <div><input type="button" class="btn" value="登入"></div>
+          <div><a href="#">? 忘記密碼</a></div>
+        </form>
+        <form id="signUp">
+          <div><input type="text" class="btn formClear" placeholder="姓名"></div>
+          <div><input type="email" class="btn formClear" placeholder="信箱"></div>
+          <div><input type="password" class="btn formClear" placeholder="密碼"></div>
+          <div><input type="password" class="btn formClear" placeholder="請確認密碼"></div>
+          <div><input type="button" class="btn" value="送出"></div>
+          <div></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 選單區(小尺寸用) -->
+  <div id="chose">
+    <div class="one choseColor-red active-red"><a href="./makeup1.html">美妝</a></div>
+    <div class="two choseColor-red"><a href="./makeup2.html">保養</a></div>
+  </div>
+
+
+
+  <!-- 橫幅 -->
+  <div id="banner">
+    <img src="./images/美妝保養館-banner1.jpg">
+    <div class="bannerColor-red">首頁 > 美妝保養館 > <span>美妝</span></div>
+  </div>
+
+  <div id="main">
+    <!-- 選單區(大尺寸: 電腦) -->
+    <div id="slide" class="bg-slideColor-red">
+      <ul>
+        <li class="h-liColor-red active-red"><a href="./makeup1.html"><i class="fa-solid fa-chevron-circle-right"></i>美妝</a></li>
+        <li class="h-liColor-red"><a href="./makeup2.html"><i class="fa-solid fa-chevron-circle-right"></i>保養</a></li>
+      </ul>
+    </div>
+    <div id="content" class="c-borderColor-red">
+      <div id="title" class="titleColor-red"><i class="fa-solid fa-cart-shopping"></i>商品清單</div>
+      
+    </div>
+  </div>
+
+
+  <!-- footer -->
+  <div id="footer">
+    <div>
+      <div>
+        <p>買 shopping 公司</p>
+        <div>
+          <i class="fa-brands fa-facebook-square"></i>
+          <i class="fa-brands fa-instagram-square"></i>
+          <i class="fa-brands fa-youtube-square"></i>
+        </div>
+      </div>
+      <div>
+        <div>
+          <i class="fa-solid fa-phone"></i>
+          電話:&nbsp;(xx)xxxx-xxxx
+        </div>
+        <div>
+          <i class="fa-solid fa-location-dot"></i>
+          地址:&nbsp;xx市xx區xx路xx號xx樓
+        </div>
+        <div>
+          <i class="fa-solid fa-clock"></i>
+          服務時間:&nbsp;週一 ~ 五 8:00 ~ 19:00
+        </div>
+      </div>
+    </div>
+    <div>
+      此為切版練習<br>
+      所有圖片權利為原網站原作者所有
+    </div>
+  </div>
+
+  <!-- 引入使用 navbar 的 js -->
+  <script src="./js/navbar.js"></script>
+  <script>
+    const content = document.querySelector('#content')
+    const data = [
+      {
+        img: './images/BB 霜.png',
+        job: 'XXX 品牌',
+        content: '水嫩BB霜',
+        price: '價格: $XXX元'
+      },
+      {
+        img: './images/口紅.png',
+        job: 'XXX 品牌',
+        content: '超完美持久唇膏-桃紅',
+        price: '價格: $XXX元'
+      },
+      {
+        img: './images/口紅2.png',
+        job: 'XXX 品牌',
+        content: '超完美持久唇膏-紅',
+        price: '價格: $XXX元'
+      }
+    ]
+
+    console.log(data[0].img)
+
+    let newData = []
+    for (let i=0; i<22; i++) {
+      let num = Math.round(Math.random() * (2 - 0) + 0)
+      // console.log(num)
+      newData.push(data[num])
+    }
+    console.log(newData)
+
+    for (const i in newData) {
+      console.log(i)
+      content.insertAdjacentHTML('beforeend', `
+        <div class="card">
+          <div>
+            <img src="${newData[i].img}">
+          </div>
+          <div>${newData[i].job}</div>
+          <div>${newData[i].content}</div>
+          <div>${newData[i].price}</div>
+        </div>
+      `)
+    }
+    
+  </script>
+</body>
+</html>

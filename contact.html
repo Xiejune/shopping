@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- == css 樣式 == -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- == 清除預設樣式 == -->
+  <link rel="stylesheet" href="./css/normalize.css">
+  <!-- == font awesome : icon 的使用 == -->
+  <link rel="stylesheet" href="./css/all.css">
+  <title>聯絡我們</title>
+</head>
+<body>
+  <!-- 架構1. 導覽列 -->
+  <div id="navbar">
+    <div class="container">
+      <!-- (1) 漢堡清單按鈕 -->
+      <button type="button" id="btn-list" class="btn" data-key="0"><i class="fa-solid fa-bars"></i></button>
+      <!-- (2) logo -->
+      <a href="./index.html" id="logo"><img src="./images/lodo.svg"></a>
+      <!-- (4) 導覽列菜單 -->
+      <ul id="menu">
+        <li id="btn-menuChild" data-key="0">
+          <p>
+            <i class="fa-solid fa-store"></i>&nbsp; 全館分類
+            <i class="fa-solid fa-chevron-down menuIcon"></i>
+          </p>
+          <ul>
+            <li><a href="./electrical1.html">3C&nbsp;家電館</a></li>
+            <li><a href="./food1.html">人氣美食館</a></li>
+            <li><a href="./makeup1.html">美妝保養館</a></li>
+          </ul>
+        </li>
+        <li><p><a href="./contact.html"><i class="fa-solid fa-envelope"></i>&nbsp; 聯絡我們</a></p></li>
+      </ul>
+      <!-- (3-1) 回首頁按鈕 -->
+      <button type="button" id="btn-home" class="btn"><a href="./index.html"><i class="fa-solid fa-house"></i></a></button>
+      <!-- (3-2) 會員登入按鈕 -->
+      <button type="button" id="btn-user" class="btn"><i class="fa-solid fa-circle-user"></i></button>
+    </div>
+  </div>
+
+  <!-- 會員登入畫面 -->
+  <div id="user">
+    <div class="content">
+      <!-- 關閉視窗按鈕 -->
+      <button type="button" id="btn-close"><i class="fa-solid fa-circle-xmark"></i></button>
+      <!-- (1) 放 logo -->
+      <div><img src="./images/lodo.svg"></div>
+      <!-- (2) 登入 / 註冊 按鈕 -->
+      <div>
+        <div><button type="button" id="btn-signIn" class="btn">登入</button></div>
+        <div><button type="button" id="btn-signUp" class="btn">註冊</button></div>
+      </div>
+      <!-- (3) 登入 / 註冊 內容 -->
+      <div>
+        <form id="signIn">
+          <div><input type="email" class="btn formClear" placeholder="信箱"></div>
+          <div><input type="password" class="btn formClear" placeholder="密碼"></div>
+          <div><div><input type="checkbox">&nbsp; 記住密碼</div></div>
+          <div><input type="button" class="btn" value="登入"></div>
+          <div><a href="#">? 忘記密碼</a></div>
+        </form>
+        <form id="signUp">
+          <div><input type="text" class="btn formClear" placeholder="姓名"></div>
+          <div><input type="email" class="btn formClear" placeholder="信箱"></div>
+          <div><input type="password" class="btn formClear" placeholder="密碼"></div>
+          <div><input type="password" class="btn formClear" placeholder="請確認密碼"></div>
+          <div><input type="button" class="btn" value="送出"></div>
+          <div></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 聯絡我們主頁 -->
+  <div id="contact">
+    <div>
+      <img src="./images/logoInIcon.svg">
+    </div>
+    <div>
+      <div id="ask">
+        <div>
+          <p>你的姓名:</p>
+          <p><input type="text"></p>
+        </div>
+        <div>
+          <p>你的信箱:</p>
+          <p><input type="email"></p>
+        </div>
+        <div>
+          <p>你的訊息:</p>
+          <p><textarea cols="30" rows="10"></textarea></p>
+        </div>
+        <div>
+          <button type="button">送出</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- footer -->
+  <div id="footer">
+    <div>
+      <div>
+        <p>買 shopping 公司</p>
+        <div>
+          <i class="fa-brands fa-facebook-square"></i>
+          <i class="fa-brands fa-instagram-square"></i>
+          <i class="fa-brands fa-youtube-square"></i>
+        </div>
+      </div>
+      <div>
+        <div>
+          <i class="fa-solid fa-phone"></i>
+          電話:&nbsp;(xx)xxxx-xxxx
+        </div>
+        <div>
+          <i class="fa-solid fa-location-dot"></i>
+          地址:&nbsp;xx市xx區xx路xx號xx樓
+        </div>
+        <div>
+          <i class="fa-solid fa-clock"></i>
+          服務時間:&nbsp;週一 ~ 五 8:00 ~ 19:00
+        </div>
+      </div>
+    </div>
+    <div>
+      此為切版練習<br>
+      所有圖片權利為原網站原作者所有
+    </div>
+  </div>
+
+  <!-- 引入使用 navbar 的 js -->
+  <script src="./js/navbar.js"></script>
+</body>
+</html>
