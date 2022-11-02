@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- == css 樣式 == -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- == 清除預設樣式 == -->
+  <link rel="stylesheet" href="./css/normalize.css">
+  <!-- == font awesome : icon 的使用 == -->
+  <link rel="stylesheet" href="./css/all.css">
+  <!-- == 設定 swiper css == -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <title>買 Shopping 購物網</title>
+  <style>
+    /* 主頁輪播圖 */
+    #home-swiper .swiper-wrapper .swiper-slide:nth-of-type(1) .home-img {
+      background: url("./images/swipper-3c電器.jpg") no-repeat center center/contain;
+    }
+    #home-swiper .swiper-wrapper .swiper-slide:nth-of-type(2) .home-img {
+      background: url("./images/swipper-人氣美食1.jpg") no-repeat center center/contain;
+    }
+    #home-swiper .swiper-wrapper .swiper-slide:nth-of-type(3) .home-img {
+      background: url("./images/swipper-人氣美食2.jpg") no-repeat center center/contain;
+    }
+    #home-swiper .swiper-wrapper .swiper-slide:nth-of-type(4) .home-img {
+      background: url("./images/swipper-美妝保養.jpg") no-repeat center center/contain;
+    }
+    #news .new-img {
+      background: url("./images/news.png") no-repeat center center/contain;
+    }
+    @media (min-width: 992px) {
+      /* 主頁輪播圖 */
+      #home-swiper .swiper-wrapper .swiper-slide:nth-of-type(1) .home-img {
+        background: url("./images/pc-swipper-3c電器.jpg") no-repeat center center/contain;
+      }
+      #home-swiper .swiper-wrapper .swiper-slide:nth-of-type(2) .home-img {
+        background: url("./images/pc-swipper-人氣美食1.jpg") no-repeat center center/contain;
+      }
+      #home-swiper .swiper-wrapper .swiper-slide:nth-of-type(3) .home-img {
+        background: url("./images/pc-swipper-人氣美食2.jpg") no-repeat center center/contain;
+      }
+      #home-swiper .swiper-wrapper .swiper-slide:nth-of-type(4) .home-img {
+        background: url("./images/pc-swipper-美妝保養.jpg") no-repeat center center/contain;
+      }
+      /* 最新消息區 */
+      #news .new-img {
+        background: url("./images/pc-news.png") no-repeat center center/contain;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 架構1. 導覽列 -->
+  <div id="navbar">
+    <div class="container">
+      <!-- (1) 漢堡清單按鈕 -->
+      <button type="button" id="btn-list" class="btn" data-key="0"><i class="fa-solid fa-bars"></i></button>
+      <!-- (2) logo -->
+      <a href="./index.html" id="logo"><img src="./images/lodo.svg"></a>
+      <!-- (4) 導覽列菜單 -->
+      <ul id="menu">
+        <li id="btn-menuChild" data-key="0">
+          <p>
+            <i class="fa-solid fa-store"></i>&nbsp; 全館分類
+            <i class="fa-solid fa-chevron-down menuIcon"></i>
+          </p>
+          <ul>
+            <li><a href="./electrical1.html">3C&nbsp;家電館</a></li>
+            <li><a href="./food1.html">人氣美食館</a></li>
+            <li><a href="./makeup1.html">美妝保養館</a></li>
+          </ul>
+        </li>
+        <li><p><a href="./contact.html"><i class="fa-solid fa-envelope"></i>&nbsp; 聯絡我們</a></p></li>
+      </ul>
+      <!-- (3-1) 回首頁按鈕 -->
+      <button type="button" id="btn-home" class="btn"><a href="./index.html"><i class="fa-solid fa-house"></i></a></button>
+      <!-- (3-2) 會員登入按鈕 -->
+      <button type="button" id="btn-user" class="btn"><i class="fa-solid fa-circle-user"></i></button>
+    </div>
+  </div>
+
+  <!-- 會員登入畫面 -->
+  <div id="user">
+    <div class="content">
+      <!-- 關閉視窗按鈕 -->
+      <button type="button" id="btn-close"><i class="fa-solid fa-circle-xmark"></i></button>
+      <!-- (1) 放 logo -->
+      <div><img src="./images/lodo.svg"></div>
+      <!-- (2) 登入 / 註冊 按鈕 -->
+      <div>
+        <div><button type="button" id="btn-signIn" class="btn">登入</button></div>
+        <div><button type="button" id="btn-signUp" class="btn">註冊</button></div>
+      </div>
+      <!-- (3) 登入 / 註冊 內容 -->
+      <div>
+        <form id="signIn">
+          <div><input type="email" class="btn formClear" placeholder="信箱"></div>
+          <div><input type="password" class="btn formClear" placeholder="密碼"></div>
+          <div><div><input type="checkbox">&nbsp; 記住密碼</div></div>
+          <div><input type="button" class="btn" value="登入"></div>
+          <div><a href="#">? 忘記密碼</a></div>
+        </form>
+        <form id="signUp">
+          <div><input type="text" class="btn formClear" placeholder="姓名"></div>
+          <div><input type="email" class="btn formClear" placeholder="信箱"></div>
+          <div><input type="password" class="btn formClear" placeholder="密碼"></div>
+          <div><input type="password" class="btn formClear" placeholder="請確認密碼"></div>
+          <div><input type="button" class="btn" value="送出"></div>
+          <div></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主頁輪播圖 -->
+  <div class="wrap1">
+    <div id="home-swiper" class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="home-img"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="home-img"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="home-img"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="home-img"></div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination swiper-pagination1"></div>
+    <!-- 上一張、下一張 -->
+    <div class="swiper-button-prev swiper-button-prev1"></div>
+    <div class="swiper-button-next swiper-button-next1"></div>
+  </div>
+
+  <!-- 最新消息區 -->
+  <div id="news">
+    <div class="new-img"></div>
+  </div>
+
+  <!-- 暢銷熱賣區 -->
+  <div id="hot-sales" class="sales">
+    <div>
+      <div><img src="./images/暢銷熱賣.svg"></div>
+      <div><button type="button" id="btn-hotSales-s" class="btn">3C</button></div>
+      <div><button type="button" id="btn-hotSales-m" class="btn">美食</button></div>
+      <div><button type="button" id="btn-hotSales-l" class="btn">美妝</button></div>
+    </div>
+    <div>
+      <div class="wrap2">
+        <div id="hotSales-swiper" class="swiper">
+          <!-- 輪播圖片的主體 -->
+          <div class="swiper-wrapper">
+            <!-- Slides items -->
+            <div class="swiper-slide">
+              <div>
+                <div><img class="image" src="./images/筆電.png"></div>
+                <div>
+                  <div class="job">A 品牌</div>
+                  <div class="content">9吋 4G/64G 平板電腦</div>
+                  <div class="price1">原價: 7000 元</div>
+                  <div class="price2">特價: 6500 元</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div><img class="image" src="./images/行動電源.png"></div>
+                <div>
+                  <div class="job">B 品牌</div>
+                  <div class="content">快充行動電源 9600mAh</div>
+                  <div class="price1">價格: 900 元</div>
+                  <div class="price2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div><img class="image" src="./images/藍芽耳機.png"></div>
+                <div>
+                  <div class="job">C 品牌</div>
+                  <div class="content">無線藍芽耳機</div>
+                  <div class="price1">價格: 900 元</div>
+                  <div class="price2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div><img class="image" src="./images/耳罩式藍芽耳機.png"></div>
+                <div>
+                  <div class="job">D 品牌</div>
+                  <div class="content">耳罩式藍芽降噪耳機</div>
+                  <div class="price1">原價: 2299 元</div>
+                  <div class="price2">特價: 1950 元</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 上一張、下一張 -->
+        <div class="swiper-button-prev swiper-button-prev-defined1"></div>
+        <div class="swiper-button-next swiper-button-next-defined1"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 新品推薦區 -->
+  <div id="new-sales" class="sales">
+    <div>
+      <div><img src="./images/新品推薦.svg"></div>
+      <div><button type="button" id="btn-newSales-s" class="btn">3C</button></div>
+      <div><button type="button" id="btn-newSales-m" class="btn">美食</button></div>
+      <div><button type="button" id="btn-newSales-l" class="btn">美妝</button></div>
+    </div>
+    <div>
+      <div class="wrap2">
+        <div id="newSales-swiper" class="swiper">
+          <!-- 輪播圖片的主體 -->
+          <div class="swiper-wrapper">
+            <!-- Slides items -->
+            <div class="swiper-slide">
+              <div>
+                <div><img class="image" src="./images/耳罩式藍芽耳機.png"></div>
+                <div>
+                  <div class="job">D 品牌</div>
+                  <div class="content">耳罩式藍芽降噪耳機</div>
+                  <div class="price1">原價: 2299 元</div>
+                  <div class="price2">特價: 1950 元</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div><img class="image" src="./images/藍芽耳機.png"></div>
+                <div>
+                  <div class="job">C 品牌</div>
+                  <div class="content">無線藍芽耳機</div>
+                  <div class="price1">價格: 900 元</div>
+                  <div class="price2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div><img class="image" src="./images/行動電源.png"></div>
+                <div>
+                  <div class="job">B 品牌</div>
+                  <div class="content">快充行動電源 9600mAh</div>
+                  <div class="price1">價格: 900 元</div>
+                  <div class="price2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div><img class="image" src="./images/筆電.png"></div>
+                <div>
+                  <div class="job">A 品牌</div>
+                  <div class="content">9吋 4G/64G 平板電腦</div>
+                  <div class="price1">原價: 7000 元</div>
+                  <div class="price2">特價: 6500 元</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 上一張、下一張 -->
+        <div class="swiper-button-prev swiper-button-prev-defined2"></div>
+        <div class="swiper-button-next swiper-button-next-defined2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div id="footer">
+    <div>
+      <div>
+        <p>買 shopping 公司</p>
+        <div>
+          <i class="fa-brands fa-facebook-square"></i>
+          <i class="fa-brands fa-instagram-square"></i>
+          <i class="fa-brands fa-youtube-square"></i>
+        </div>
+      </div>
+      <div>
+        <div>
+          <i class="fa-solid fa-phone"></i>
+          電話:&nbsp;(xx)xxxx-xxxx
+        </div>
+        <div>
+          <i class="fa-solid fa-location-dot"></i>
+          地址:&nbsp;xx市xx區xx路xx號xx樓
+        </div>
+        <div>
+          <i class="fa-solid fa-clock"></i>
+          服務時間:&nbsp;週一 ~ 五 8:00 ~ 19:00
+        </div>
+      </div>
+    </div>
+    <div>
+      此為切版練習<br>
+      所有圖片權利為原網站原作者所有
+    </div>
+  </div>
+  
+
+  <!-- 引入使用 navbar 的 js -->
+  <script src="./js/navbar.js"></script>
+  <!-- == 引入使用 sales 的 js == -->
+  <script src="./js/sales.js"></script>
+  <!-- == 設定 swiper js == -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    const homeSwiper = new Swiper("#home-swiper", {
+      speed: 1000, // 動畫持續時間
+      autoplay: {
+        delay: 4000 // 自動播放，設定幾毫秒播放下一張
+      },
+      pagination: {
+        el: ".swiper-pagination1",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+      // 啟用上一張、下一張功能
+      navigation: {
+        nextEl: ".swiper-button-next1",
+        prevEl: ".swiper-button-prev1",
+      },
+    });
+
+    const hotSalesSwiper = new Swiper('#hotSales-swiper', {
+      grabCursor: true, // 滑鼠游標變成可拖曳手掌
+      freeMode: true, // 拖移滑動不再是一張，可以依照拖動力道滑動很多張
+      spaceBetween: 5, // 圖片與圖片之間的距離
+      slidesPerView: 1, // 每次要顯示幾張圖片，如果有設定 breakpoint，這裡是指最小尺寸開始
+      // 使用斷點控制輪播圖各種參數，例如哪個尺寸顯示幾張圖片
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        }
+      },
+      // 啟用上一張、下一張功能
+      navigation: {
+        nextEl: ".swiper-button-next-defined1",
+        prevEl: ".swiper-button-prev-defined1",
+      },
+    })
+
+    const newSalesSwiper = new Swiper('#newSales-swiper', {
+      grabCursor: true, // 滑鼠游標變成可拖曳手掌
+      freeMode: true, // 拖移滑動不再是一張，可以依照拖動力道滑動很多張
+      spaceBetween: 5, // 圖片與圖片之間的距離
+      slidesPerView: 1, // 每次要顯示幾張圖片，如果有設定 breakpoint，這裡是指最小尺寸開始
+      // 使用斷點控制輪播圖各種參數，例如哪個尺寸顯示幾張圖片
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        }
+      },
+      // 啟用上一張、下一張功能
+      navigation: {
+        nextEl: ".swiper-button-next-defined2",
+        prevEl: ".swiper-button-prev-defined2",
+      },
+    })
+  </script>
+</body>
+</html>
